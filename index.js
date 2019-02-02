@@ -12,7 +12,6 @@ const stage = require('./config')[environment];
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 mongoose.connect(connectionUri, { useNewUrlParser: true })
     .then(console.log('Connected to the db'))
